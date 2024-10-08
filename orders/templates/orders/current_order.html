@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Ordine Corrente{% endblock %}
+
+{% block content %}
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+        {{ message }}
+        </div>
+    {% endfor %}
+    {% endif %}
+<h1>Ordine Corrente</h1>
+<ul>
+    {% if order %}
+        Ordine {{ order.id }} - {{ order.order_datetime }}
+        {% for detail in order.order_details.all %}
+            <li>
+                {% comment %} Non uso il normale dettaglio perché mostrerebbe lo status e non avrebbe senso {% endcomment %}
+                {{ detail.quantity }} x {{ detail.dish.name }}
+                <a class="btn btn-primary" href="{% url 'orders:order_detail_update' detail.pk %}">Modifica</a>
+                <a class="btn btn-secondary" href="{% url 'orders:order_detail_delete' detail.pk %}">Elimina</a>
+                <br><br>
+            </li>
+        {% endfor %}
+        <p>Totale: {{ order.total_price }} €</p>
+        <a class="btn btn-success" href="{% url 'orders:confirm_order_with_id' order.table.id %}">Conferma Ordine</a>
+        <!-- Form per eliminare l'ordine -->
+        <form method="post" action="{% url 'orders:current_order_delete' order.table.id %}" style="display:inline;">
+            {% csrf_token %}
+            <button class="btn btn-danger" type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo ordine?');">Elimina Ordine</button>
+        </form>
+
+    {% else %}
+        <p>Nessun ordine da confermare.</p>
+    {% endif %}
+</ul>
+
+{% endblock %}

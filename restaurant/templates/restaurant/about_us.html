@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block head %} {% endblock %}
+
+{% block title %}Chi siamo?{% endblock %}
+
+{% block content %}
+
+    <header>
+        <h1>Chi Siamo</h1>
+        <p>{{ contact_info.description }}</p>
+    </header>
+    <section>
+        <h2>Contatti</h2>
+        <p>Telefono: {{ contact_info.phone }}</p>
+        <p>Email: {{ contact_info.email }}</p>
+    </section>
+
+{% endblock %}

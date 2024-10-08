@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Risultati {% endblock %}
+
+{% block content %}
+<h2>Risultati</h2>
+<ul>
+    {% if object_list %}
+        {% for dish in object_list %}
+
+            <li>
+                <a href="{% url 'menu:dish_detail' dish.pk %}">{{ dish.name }}</a> - {{ dish.price }}€
+                <ul>
+                    {% for ingredient in dish.ingredients.all %}
+                        <li>{{ ingredient }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    {% else %}
+        <p>Piatti non trovati.</p>
+    {% endif %}
+    
+    
+    <a class="btn btn-primary" href="{% url 'menu:dish_search' %}">Nuova ricerca</a>
+{% endblock %}
+</ul>

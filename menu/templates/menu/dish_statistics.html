@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Statistiche del Piatto {% endblock %}
+
+{% block content %}
+<h1>Statistiche per {{ dish.name }}</h1>
+{{dish.name}} 
+<p>Prezzo:{{ dish.price }} €</p>
+<p>Profitto: {{dish.profit}} €</p>
+<p>Ingredienti:</p>
+    <ul>
+        {% for ingredient in dish.ingredients.all %}
+            <li>{{ ingredient }}</li>
+        {% endfor %}
+    </ul>
+<h3>Statistiche:</h3>
+<ul>
+    <li>Totale Incassato: {{ total_cashed }}€</li>
+    <li>Totale Guadanato: {{ total_earned }}€</li>
+    <li>Numero di Ordini in cui {{dish.name}} compare: {{ total_orders }}</li>
+    <li>Quantità totale ordinata: {{ total_quantity }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Restaurant Menu{% endblock %}
+
+{% block content %}
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+<h1 class="text-center my-4">Menu</h1>
+<div class="container">
+      <div class="row">
+          {% if menu %}
+              {% for dish in menu %}
+              <div class="col-md-4">
+                  <div class="card mb-4" style="width: 18rem;">
+                      {% if dish.image %}
+                      <img src="{{ dish.image.url }}" class="card-img-top" alt="...">
+                      {% endif %}
+                      <div class="card-body">
+                        <h5 class="card-title">{{dish.name}}</h5>
+                        <p class="card-text">{{dish.description}}</p>
+                        <a href="{% url 'menu:dish_detail' dish.pk %}" class="btn btn-primary">Dettaglio</a>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+          {% else %}
+              <div class="col-12">
+                  <p>Non ci sono piatti disponibili.</p>
+              </div>
+          {% endif %}
+      </div>
+  </div>
+  
+    <div>
+    <a class="btn btn-primary d-inline" href="{% url 'menu:dish_search' %}">Ricerca</a> <!-- Tasto per aggiungere un nuovo piatto -->
+    {% if user.is_authenticated and "Chef" in user.groups.all.0.name%}
+        <a class="btn btn-success d-inline" href="{% url 'menu:dish_create' %}">Aggiungi un nuovo piatto</a> <!-- Tasto per aggiungere un nuovo piatto -->
+        {% endif %}
+    </div>
+{% endblock %}

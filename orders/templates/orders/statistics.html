@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Statistiche{% endblock %}
+
+{% block content %}
+<h1>Statistiche Generali</h1>
+<ul>
+    <li>Totale Incassato: {{ total_cashed }} €</li>
+    <li>Totale Guadagnato: €{{ total_earned }} €</li>
+    <li>Numero Totale di Ordini: {{ total_orders }}</li>
+    <li>Numero Totale di dettagli d'ordine: {{ total_order_details }}</li>
+    <li>Numero Totale di Piatti Venduti: {{ total_quantity }}</li>
+    <li>Quantità Media di dettagli d'ordine per Ordine: {{ avg_order_details_per_order }}</li>
+    <li>Quantità Media di Piatti per Ordine: {{ avg_quantity_per_order }}</li>
+</ul>
+
+<h2>Top 3 Piatti Più Ordinati</h2>
+<ul>
+    {% for dish in top_3_dishes %}
+        <li>{{ dish.dish__name }}: {{ dish.total_ordered }} volte</li>
+    {% endfor %}
+</ul>
+
+<h2>Top 3 Piatti Meno Ordinati</h2>
+<ul>
+    {% for dish in bottom_3_dishes %}
+        <li>{{ dish.dish__name }}: {{ dish.total_ordered }} volte</li>
+    {% endfor %}
+</ul>
+</ul>
+{% endblock %}

@@ -1,0 +1,72 @@
+# Sito per Ristorante Sushi
+
+Sito web per un ristorante sushi, che permette agli utenti di esplorare vari piatti di sushi con descrizioni dettagliate e immagini ed effettuare ricerche mirate. È possibile ordinare i piatti dopo aver fatto il login come tavolo del ristorante.
+
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing](#testing)
+
+## Requirements
+
+- asgiref 3.8.1
+- Django 5.0.6
+- django-braces 1.15.0
+- pillow 10.3.0
+- sqlparse 0.5.0
+- tzdata 2024.1
+
+## Installation
+
+1. Assicurati di avere Python 3.x installato sul tuo sistema:
+
+    ```bash
+    python --version
+    ```
+
+2. Crea e attiva un ambiente virtuale:
+
+    ```bash
+    python -m venv env
+    source env/bin/activate  
+    ```
+
+3. Installa tutte le dipendenze:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Esegui le migrazioni del database:
+
+    ```bash
+    python manage.py migrate
+    ```
+
+## Usage
+
+1. Assicurati che l'ambiente virtuale sia attivo:
+
+    ```bash
+    source env/bin/activate  # Su Windows usa `env\Scripts\activate`
+    ```
+
+2. Avvia il server di sviluppo:
+
+    ```bash
+    python manage.py runserver
+    ```
+
+3. Apri il browser e vai su `http://localhost:8000`.
+
+4. L'applicazione è pronta per l'utilizzo. Puoi navigare nel menu, fare ordini, ricevere raccomandazioni e molto altro.
+
+## Testing
+
+Per eseguire i test:
+
+    ```bash
+    python manage.py test
+    ```

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Conferma Ordine{% endblock %}
+
+{% block content %}
+<h1>Conferma Ordine</h1>
+<form method="post">
+    {% csrf_token %}
+    <p>Sei sicuro di voler confermare l'ordine?</p>
+    <button type="submit" class="btn btn-success">Conferma</button>
+    <a class="btn btn-danger" href="{% url 'menu:menu' %}">Annulla</a>
+</form>
+{% endblock %}

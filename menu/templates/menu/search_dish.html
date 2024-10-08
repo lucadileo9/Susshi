@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %} Ricerca {% endblock %}
+
+{% block content %}
+    <h1>Ricerca Piatti</h1>
+    <form action="{% url 'menu:dish_search' %}" method="POST"> {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-primary">Cerca</button>
+   </form>
+{% endblock %}

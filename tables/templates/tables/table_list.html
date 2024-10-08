@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Tavoli{% endblock %}
+{% block content %}
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+<h2>Lista dei Tavoli</h2>
+    {% if tables %}
+    <ul class="list-group list-group-flush">
+
+        {% for table in tables %}
+        <li class="list-group-item">
+            <a href="{% url 'tables:table_detail' table.pk %}">{{ table }}</a>
+        </li>
+    </ul>
+        {% endfor %}
+    {% else %}
+        <p>Non ci sono tavoli disponibili.</p>
+    {% endif %} 
+{% if user.is_authenticated and "Chef" in user.groups.all.0.name  %}
+        <a class="btn btn-info" href="{% url 'orders:statistics' %}">Statistiche</a> <!-- Tasto per eliminare il piatto -->
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Creazione {{ form.user_group_name }} {% endblock %} 
+
+{% block  content %}
+  <h1>Pagina di Registrazione di un tavolo</h1>
+  <p>Si prega di compilare i campi necessari</p> 
+
+  <form method="post"> {% csrf_token %}
+
+  {{form }}
+  
+  <input type="submit" value="Registrati ora!">
+  
+  </form>
+
+{% endblock %}

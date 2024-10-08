@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Elimina ordine</h1>
+    <p>Sicuro di voler cancellare l'ordine corrente?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-danger" type="submit">Elimina Ordine</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Modifica {{dish.name}}{% endblock %}
+
+{% block content %}
+    <h1>Modifica Piatto</h1>
+    <div class="d-flex justify-content-between">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-flex ">
+            <button type="submit" class="btn btn-success mr-2">Conferma</button>
+            <a class="btn btn-info" href="{% url 'menu:dish_detail' dish.pk %}">Torna al dettaglio del piatto</a>
+        </div>
+    </form>
+        {% endblock %}

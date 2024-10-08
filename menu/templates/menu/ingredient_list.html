@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Restaurant Ingredients{% endblock %}
+
+{% block content %}
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+    <h1>Ingredienti</h1>
+    {% if ingredients %}
+    <ul class="list-group list-group-flush">
+        {% for ingredient in ingredients %}
+        <li class="list-group-item"><a href="{% url 'menu:ingredient_detail' ingredient.pk %}">{{ ingredient }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>Non ci sono ingredienti.</p>
+    {% endif %}
+
+    {% if user.is_authenticated and "Chef" in user.groups.all.0.name%}
+        <a class="btn btn-success" href="{% url 'menu:ingredient_create' %}">Aggiungi un nuovo ingrediente</a> <!-- Tasto per aggiungere un nuovo ingrediente -->
+    {% endif %}
+
+{% endblock %}

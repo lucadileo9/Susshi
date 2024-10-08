@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Conferma Eliminazione Dettaglio Ordine{% endblock %}
+
+{% block content %}
+<h1>Conferma Eliminazione</h1>
+<p>Sei sicuro di voler eliminare {{ order_detail.dish.name }} dall'ordine?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Elimina</button>
+    <a class="btn btn-success" href="{% url 'orders:current_order_detail' %}">Annulla</a>
+</form>
+{% endblock %}

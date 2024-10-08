@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Modifica {{ingredient.name}}{% endblock %}
+
+{% block content %}
+    <h1>Modifica Ingrediente</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-flex ">
+            <button type="submit" class="btn btn-success mr-2">Conferma</button>
+            <a class="btn btn-info" href="{% url 'menu:ingredient_detail' ingredient.pk %}">Torna al dettaglio dell'ingrediente</a>
+        </div>
+    </form>
+    </form>
+{% endblock %}

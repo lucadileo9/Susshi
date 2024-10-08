@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ ingredient.name}}{% endblock %}
+
+
+{% block content %}
+    <h1>{{ ingredient.name }}</h1>
+    <br>
+    {% if user.is_authenticated and "Chef" in user.groups.all.0.name  or user.is_staff %}
+        <a class="btn btn-success" href="{% url 'menu:ingredient_edit' ingredient.pk %}">Modifica</a> <!-- Tasto per modificare il piatto -->
+        <a class="btn btn-danger" href="{% url 'menu:ingredient_delete' ingredient.pk %}">Elimina</a> <!-- Tasto per eliminare il piatto -->
+    {% endif %}
+
+{% endblock %}

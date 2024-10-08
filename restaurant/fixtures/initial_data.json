@@ -1,0 +1,1164 @@
+[
+    {
+        "model": "restaurant.restaurantinfo",
+        "pk": 1,
+        "fields": {
+            "name": "Susshi House",
+            "address": "123 Sushi St, Modena, Italia",
+            "image": "sushi.jpg"
+          }
+    },
+    {
+        "model": "restaurant.contactinfo",
+        "pk": 1,
+        "fields": {
+            "phone": "+39 123 456 7890",
+            "email": "info@sushihouse.it",
+            "description": "In una tranquilla strada nel cuore di Modena, c'era un giovane chef italiano che sognava di portare la tradizione del sushi giapponese in Italia. Ogni giorno, selezioniamo i migliori ingredienti per offrirvi un'esperienza culinaria unica e autentica. Benvenuti a Susshi House, dove la tradizione incontra l'innovazione in ogni piatto. Grazie per essere nostri ospiti."
+        }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 1,
+      "fields": {
+        "name": "Riso"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 2,
+      "fields": {
+        "name": "Salmone"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 3,
+      "fields": {
+        "name": "Tonno"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 4,
+      "fields": {
+        "name": "Avocado"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 5,
+      "fields": {
+        "name": "Cetriolo"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 6,
+      "fields": {
+        "name": "Alghe"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 7,
+      "fields": {
+        "name": "Wasabi"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 8,
+      "fields": {
+        "name": "Zenzero"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 9,
+      "fields": {
+        "name": "Branzino"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 10,
+      "fields": {
+        "name": "Verdure"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 11,
+      "fields": {
+        "name": "Farina"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 12,
+      "fields": {
+        "name": "Uova"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 13,
+      "fields": {
+        "name": "Olio"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 14,
+      "fields": {
+        "name": "Salsa di soia"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 15,
+      "fields": {
+        "name": "Salsa teriyaki"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 16,
+      "fields": {
+        "name": "Carne"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 17,
+      "fields": {
+        "name": "Fagioli"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 18,
+      "fields": {
+        "name": "Sale"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 19,
+      "fields": {
+        "name": "Miso"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 20,
+      "fields": {
+        "name": "Tofu"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 21,
+      "fields": {
+        "name": "Cipollotto"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 22,
+      "fields": {
+        "name": "Manzo"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 23,
+      "fields": {
+        "name": "Pollo"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 24,
+      "fields": {
+        "name": "Sake"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 25,
+      "fields": {
+        "name": "Soba"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 26,
+      "fields": {
+        "name": "Polpo"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 27,
+      "fields": {
+        "name": "Polpa di granchio"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 28,
+      "fields": {
+        "name": "Anguilla"
+      }
+    },
+    {
+      "model": "menu.ingredient",
+      "pk": 29,
+      "fields": {
+        "name": "Gamberi"
+      }
+    },
+    
+      {
+        "model": "menu.dish",
+        "pk": 1,
+        "fields": {
+          "name": "Sushi Misto",
+          "description": "Un piatto variegato con una selezione di sushi, tra cui salmone, tonno, avocado e cetriolo, avvolti in alghe e accompagnati da wasabi e zenzero.",
+          "price": "10.00",
+          "profit": "5.00",
+          "ingredients": [1, 2, 3, 4, 5, 6, 7, 8],
+          "image": "dish_images/sushimisto.png"
+        }
+      },
+      {
+        "model": "menu.dish",
+        "pk": 2,
+        "fields": {
+          "name": "Sashimi",
+          "description": "Un raffinato assortimento di sashimi, con salmone, tonno e branzino freschissimi, accompagnati da wasabi e zenzero per esaltare i sapori naturali del pesce.",
+          "price": "15.00",
+          "profit": "7.50",
+          "ingredients": [2, 3, 9, 7, 8],
+          "image": "dish_images/sashimi.png"
+        }
+      },
+      {
+        "model": "menu.dish",
+        "pk": 3,
+        "fields": {
+          "name": "Tempura",
+          "description": "Tempura di verdure croccanti, fritte in una leggera pastella di farina e uova, accompagnate da una salsa di soia per un'esperienza gustativa unica.",
+          "price": "8.00",
+          "profit": "4.00",
+          "ingredients": [10, 11, 12, 13, 14],
+          "image": "dish_images/tempura.png"
+        }
+      },
+      {
+        "model": "menu.dish",
+        "pk": 4,
+        "fields": {
+          "name": "Uramaki",
+          "description": "Uramaki con salmone fresco, avocado e cetriolo, avvolti in riso e alghe, con un tocco di wasabi e zenzero per un sapore equilibrato.",
+          "price": "12.00",
+          "profit": "6.00",
+          "ingredients": [1, 2, 4, 5, 6, 7, 8],
+          "image": "dish_images/uramaki.png"
+        }
+      },
+      {
+        "model": "menu.dish",
+        "pk": 5,
+        "fields": {
+          "name": "Nigiri",
+          "description": "Nigiri assortiti con riso e fettine di salmone, tonno e branzino freschi, serviti con una punta di wasabi e zenzero per un tocco piccante.",
+          "price": "10.00",
+          "profit": "5.00",
+          "ingredients": [1, 2, 3, 9, 7, 8],
+          "image": "dish_images/nigiri.png"
+        }
+      },
+      {
+        "model": "menu.dish",
+        "pk": 6,
+        "fields": {
+          "name": "Tartare",
+          "description": "Tartare di tonno con avocado e cetriolo, arricchita con alghe e un tocco di wasabi e zenzero per un piatto fresco e saporito.",
+          "price": "18.00",
+          "profit": "9.00",
+          "ingredients": [3, 4, 5, 6, 7, 8],
+          "image": "dish_images/tartare.png"
+        }
+      },
+      {
+        "model": "menu.dish",
+        "pk": 7,
+        "fields": {
+          "name": "Gyoza",
+          "description": "Gyoza di carne, verdure e spezie, avvolti in una sottile pasta e fritti alla perfezione, serviti con una salsa di soia leggera.",
+          "price": "8.00",
+          "profit": "4.00",
+          "ingredients": [16, 10, 11, 12, 13, 14],
+          "image": "dish_images/gyoza.png"
+        }
+      },
+      {
+        "model": "menu.dish",
+        "pk": 8,
+        "fields": {
+          "name": "Edamame",
+          "description": "Edamame al sale, fagioli di soia cotti al vapore e leggermente salati, un antipasto leggero e nutriente.",
+          "price": "5.00",
+          "profit": "2.50",
+          "ingredients": [17, 18, 13],
+          "image": "dish_images/edamame.png"
+        }
+      },
+      {
+        "model": "menu.dish",
+        "pk": 9,
+        "fields": {
+          "name": "Miso",
+          "description": "Zuppa di miso tradizionale giapponese, con alghe, tofu e cipollotto, per un brodo caldo e nutriente.",
+          "price": "4.00",
+          "profit": "2.00",
+          "ingredients": [19, 6, 20, 21],
+          "image": "dish_images/miso.png"
+        }
+      },
+      {
+        "model": "menu.dish",
+        "pk": 10,
+        "fields": {
+          "name": "Yakitori",
+          "description": "Spiedini di pollo alla griglia, marinati in salsa teriyaki e accompagnati da verdure fresche, un classico della cucina giapponese.",
+          "price": "8.00",
+          "profit": "4.00",
+          "ingredients": [23, 15, 10],
+          "image": "dish_images/yakitori.png"
+        }
+      },
+        {
+          "model": "menu.dish",
+          "pk": 11,
+          "fields": {
+            "name": "Tataki",
+            "description": "Tataki di manzo, leggermente scottato e marinato in salsa teriyaki, servito con verdure fresche per un'esperienza gustativa unica.",
+            "price": "20.00",
+            "profit": "10.00",
+            "ingredients": [22, 15, 10],
+            "image": "dish_images/tataki.png"
+          }
+        },
+        {
+          "model": "menu.dish",
+          "pk": 12,
+          "fields": {
+            "name": "Tofu",
+            "description": "Tofu fritto, avvolto in una croccante pastella di farina e accompagnato da salsa di soia, per un piatto leggero e saporito.",
+            "price": "6.00",
+            "profit": "3.00",
+            "ingredients": [20, 11, 13, 14],
+            "image": "dish_images/tofu.png"
+          }
+        },
+        {
+          "model": "menu.dish",
+          "pk": 13,
+          "fields": {
+            "name": "Sake",
+            "description": "Salmone grigliato alla perfezione, marinato in salsa teriyaki e servito con verdure fresche per un piatto equilibrato e gustoso.",
+            "price": "12.00",
+            "profit": "6.00",
+            "ingredients": [2, 15, 10],
+            "image": "dish_images/sake.png"
+          }
+        },
+        {
+          "model": "menu.dish",
+          "pk": 14,
+          "fields": {
+            "name": "Soba",
+            "description": "Soba con verdure fresche, saltate in salsa di soia, per un piatto di noodles leggero e saporito, perfetto per ogni occasione.",
+            "price": "10.00",
+            "profit": "5.00",
+            "ingredients": [25, 10, 14],
+            "image": "dish_images/soba.png"
+          }
+        },
+        {
+          "model": "menu.dish",
+          "pk": 15,
+          "fields": {
+            "name": "California Roll",
+            "description": "Un classico California Roll con polpa di granchio, avocado e cetriolo, avvolti in riso e alghe, con un tocco di maionese per un sapore cremoso.",
+            "price": "10.00",
+            "profit": "5.00",
+            "ingredients": [1, 4, 5, 6, 27],
+            "image": "dish_images/californiaroll.png"
+
+          }
+        },
+        {
+          "model": "menu.dish",
+          "pk": 16,
+          "fields": {
+            "name": "Unagi Nigiri",
+            "description": "Nigiri con anguilla grigliata, spennellata con una salsa dolce di soia e servita su un letto di riso, per un'esperienza di gusto unica e saporita.",
+            "price": "12.00",
+            "profit": "6.00",
+            "ingredients": [1, 14, 9, 28],
+            "image": "dish_images/unaginigiri.png"
+          }
+        },
+        {
+          "model": "menu.dish",
+          "pk": 17,
+          "fields": {
+            "name": "Spicy Tuna Roll",
+            "description": "Rotolo piccante di tonno con avocado e cetriolo, avvolto in alghe e riso, condito con una salsa piccante e maionese per un sapore intenso.",
+            "price": "12.00",
+            "profit": "6.00",
+            "ingredients": [1, 3, 4, 5, 6, 7],
+            "image": "dish_images/spicytunaroll.png"
+          }
+        },
+        {
+          "model": "menu.dish",
+          "pk": 18,
+          "fields": {
+            "name": "Ebi Tempura",
+            "description": "Gamberi tempura fritti alla perfezione, serviti con una salsa di soia leggera per un piatto croccante e saporito.",
+            "price": "14.00",
+            "profit": "7.00",
+            "ingredients": [11, 12, 13, 14, 29],
+            "image": "dish_images/ebitempura.png"
+          }
+        },
+        {
+          "model": "menu.dish",
+          "pk": 19,
+          "fields": {
+            "name": "Chirashi",
+            "description": "Una ciotola di riso sushi, guarnita con una varietà di pesce crudo fresco, verdure e una spolverata di semi di sesamo, per un pasto completo e colorato.",
+            "price": "16.00",
+            "profit": "8.00",
+            "ingredients": [1, 2, 3, 10, 21],
+            "image": "dish_images/chirashi.png"
+          }
+        },
+        {
+          "model": "menu.dish",
+          "pk": 20,
+          "fields": {
+            "name": "Karaage",
+            "description": "Bocconcini di pollo fritti in stile giapponese, marinati con salsa di soia e zenzero, serviti con una fetta di limone e maionese per un tocco di freschezza.",
+            "price": "10.00",
+            "profit": "5.00",
+            "ingredients": [23, 14, 7, 13],
+            "image": "dish_images/karaage.png"
+          }
+        },
+        {
+            "model": "auth.user",
+            "pk": 1,
+            "fields": {
+                "username": "Speranza",
+                "password": "pbkdf2_sha256$720000$D4d1Uf6gSH6P4iQP35taVt$IrIaJg6TN8/tWh/hWnAWr1Ku3lb0diq7/GEShwHT9oU=",
+                "is_superuser": false,
+                "first_name": "",
+                "last_name": "",
+                "email": "",
+                "is_staff": false,
+                "is_active": true,
+                "date_joined": "2024-06-01T00:00:00Z",
+                "groups": [2],
+                "user_permissions": []
+            }
+        },
+        {
+            "model": "auth.user",
+            "pk": 2,
+            "fields": {
+                "username": "Fortuna",
+                "password": "pbkdf2_sha256$720000$mZ9S50mrL2nHozzPCScUOl$R5L0Q6knCz5+dcZr0LiGzi1wt0n7k5p370YNr0fWqRo=",
+                "is_superuser": false,
+                "first_name": "",
+                "last_name": "",
+                "email": "",
+                "is_staff": false,
+                "is_active": true,
+                "date_joined": "2024-06-01T00:00:00Z",
+                "groups": [2],
+                "user_permissions": []
+            }
+        },
+        {
+            "model": "auth.user",
+            "pk": 3,
+            "fields": {
+                "username": "Amicizia",
+                "password": "pbkdf2_sha256$720000$QwYm8RkQOGGyNipBI5jdCp$D6szE0B+40k70jLyAUA/3nCQhvO6DFVNXJ3XE2VaHRY=",
+                "is_superuser": false,
+                "first_name": "",
+                "last_name": "",
+                "email": "",
+                "is_staff": false,
+                "is_active": true,
+                "date_joined": "2024-06-01T00:00:00Z",
+                "groups": [2],
+                "user_permissions": []
+            }
+        },
+        {
+            "model": "auth.user",
+            "pk": 4,
+            "fields": {
+                "username": "Fedeltà",
+                "password": "pbkdf2_sha256$720000$mAwp2cEF14THYFqdx3BYJI$zF5yOfV9dkExGtu1CNuUt4Pv99uNFUK0mk1krEPimDs=",
+                "is_superuser": false,
+                "first_name": "",
+                "last_name": "",
+                "email": "",
+                "is_staff": false,
+                "is_active": true,
+                "date_joined": "2024-06-01T00:00:00Z",
+                "groups": [2],
+                "user_permissions": []
+            }
+        },
+        {
+            "model": "tables.table",
+            "pk": 1,
+            "fields": {
+                "user": 1,
+                "table_number": 1
+            }
+        },
+        {
+            "model": "tables.table",
+            "pk": 2,
+            "fields": {
+                "user": 2,
+                "table_number": 2
+            }
+        },
+        {
+            "model": "tables.table",
+            "pk": 3,
+            "fields": {
+                "user": 3,
+                "table_number": 3
+            }
+        },
+        {
+            "model": "tables.table",
+            "pk": 4,
+            "fields": {
+                "user": 4,
+                "table_number": 4
+            }
+        },
+
+        {
+          "model": "auth.user",
+          "pk": 101,
+          "fields": {
+              "username": "Zorro",
+              "password": "pbkdf2_sha256$720000$KGaWAqU8avqhJ4OyJRr8Qs$d3xFD7/9uggXVB6FFOY1slSFoAO6672MLeKFL39qCq4=",
+              "is_superuser": false,
+              "first_name": "",
+              "last_name": "",
+              "email": "",
+              "is_staff": false,
+              "is_active": true,
+              "date_joined": "2024-06-01T00:00:00Z",
+              "groups": [1],
+              "user_permissions": []
+          }
+      }, 
+      {
+        "model": "auth.user",
+        "pk": 102,
+        "fields": {
+            "username": "Valter",
+            "password": "pbkdf2_sha256$720000$xuTYs6BqwYPgdOVQfh4Umv$89C51uDq19otQRxUwGP1o+Y1b+wOs4avwGLJidzKiIk=",
+            "is_superuser": false,
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-06-01T00:00:00Z",
+            "groups": [1],
+            "user_permissions": []
+        }
+    }, 
+    {
+      "model": "orders.order",
+      "pk": 1,
+      "fields": {
+        "table": null,
+        "order_datetime": "2024-06-10T12:00:00Z",
+        "status": "confermato"
+      }
+    },
+    {
+      "model": "orders.order",
+      "pk": 2,
+      "fields": {
+        "table": null,
+        "order_datetime": "2024-06-10T12:15:00Z",
+        "status": "confermato"
+      }
+    },
+    {
+      "model": "orders.order",
+      "pk": 3,
+      "fields": {
+        "table": null,
+        "order_datetime": "2024-06-10T12:30:00Z",
+        "status": "confermato"
+      }
+    },
+    {
+      "model": "orders.order",
+      "pk": 4,
+      "fields": {
+        "table": null,
+        "order_datetime": "2024-06-10T12:45:00Z",
+        "status": "confermato"
+      }
+    },
+    {
+      "model": "orders.order",
+      "pk": 5,
+      "fields": {
+        "table": null,
+        "order_datetime": "2024-06-10T13:00:00Z",
+        "status": "confermato"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 1,
+      "fields": {
+        "order": 1,
+        "dish": 1,
+        "quantity": 2,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 2,
+      "fields": {
+        "order": 1,
+        "dish": 2,
+        "quantity": 1,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 3,
+      "fields": {
+        "order": 1,
+        "dish": 3,
+        "quantity": 1,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 4,
+      "fields": {
+        "order": 2,
+        "dish": 4,
+        "quantity": 3,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 5,
+      "fields": {
+        "order": 2,
+        "dish": 5,
+        "quantity": 2,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 6,
+      "fields": {
+        "order": 3,
+        "dish": 6,
+        "quantity": 1,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 7,
+      "fields": {
+        "order": 3,
+        "dish": 7,
+        "quantity": 2,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 8,
+      "fields": {
+        "order": 3,
+        "dish": 8,
+        "quantity": 1,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 9,
+      "fields": {
+        "order": 3,
+        "dish": 9,
+        "quantity": 1,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 10,
+      "fields": {
+        "order": 3,
+        "dish": 10,
+        "quantity": 2,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 11,
+      "fields": {
+        "order": 4,
+        "dish": 11,
+        "quantity": 4,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 12,
+      "fields": {
+        "order": 5,
+        "dish": 12,
+        "quantity": 2,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 13,
+      "fields": {
+        "order": 5,
+        "dish": 13,
+        "quantity": 1,
+        "status": "pronto"
+      }
+    },
+    {
+      "model": "orders.orderdetail",
+      "pk": 14,
+      "fields": {
+        "order": 5,
+        "dish": 14,
+        "quantity": 3,
+        "status": "pronto"
+      }
+    },
+      {
+        "model": "orders.order",
+        "pk": 6,
+        "fields": {
+          "table": null,
+          "order_datetime": "2024-06-10T13:15:00Z",
+          "status": "confermato"
+        }
+      },
+      {
+        "model": "orders.order",
+        "pk": 7,
+        "fields": {
+          "table": null,
+          "order_datetime": "2024-06-10T13:30:00Z",
+          "status": "confermato"
+        }
+      },
+      {
+        "model": "orders.order",
+        "pk": 8,
+        "fields": {
+          "table": null,
+          "order_datetime": "2024-06-10T13:45:00Z",
+          "status": "confermato"
+        }
+      },
+      {
+        "model": "orders.order",
+        "pk": 9,
+        "fields": {
+          "table": null,
+          "order_datetime": "2024-06-10T14:00:00Z",
+          "status": "confermato"
+        }
+      },
+      {
+        "model": "orders.order",
+        "pk": 10,
+        "fields": {
+          "table": null,
+          "order_datetime": "2024-06-10T14:15:00Z",
+          "status": "confermato"
+        }
+      },
+        {
+          "model": "orders.order",
+          "pk": 11,
+          "fields": {
+            "table": null,
+            "order_datetime": "2024-06-11T12:00:00Z",
+            "status": "confermato"
+          }
+        },
+        {
+          "model": "orders.order",
+          "pk": 12,
+          "fields": {
+            "table": null,
+            "order_datetime": "2024-06-11T12:15:00Z",
+            "status": "confermato"
+          }
+        },
+        {
+          "model": "orders.order",
+          "pk": 13,
+          "fields": {
+            "table": null,
+            "order_datetime": "2024-06-11T12:30:00Z",
+            "status": "confermato"
+          }
+        },
+        {
+          "model": "orders.order",
+          "pk": 14,
+          "fields": {
+            "table": null,
+            "order_datetime": "2024-06-11T12:45:00Z",
+            "status": "confermato"
+          }
+        },
+        {
+          "model": "orders.order",
+          "pk": 15,
+          "fields": {
+            "table": null,
+            "order_datetime": "2024-06-11T13:00:00Z",
+            "status": "confermato"
+          }
+        },
+        {
+          "model": "orders.order",
+          "pk": 16,
+          "fields": {
+            "table": null,
+            "order_datetime": "2024-06-11T13:15:00Z",
+            "status": "confermato"
+          }
+        },
+        {
+          "model": "orders.order",
+          "pk": 17,
+          "fields": {
+            "table": null,
+            "order_datetime": "2024-06-11T13:30:00Z",
+            "status": "confermato"
+          }
+        },
+        {
+          "model": "orders.order",
+          "pk": 18,
+          "fields": {
+            "table": null,
+            "order_datetime": "2024-06-11T13:45:00Z",
+            "status": "confermato"
+          }
+        },      
+      {
+        "model": "orders.orderdetail",
+        "pk": 15,
+        "fields": {
+          "order": 6,
+          "dish": 15,  
+          "quantity": 2,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 16,
+        "fields": {
+          "order": 6,
+          "dish": 16,  
+          "quantity": 3,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 17,
+        "fields": {
+          "order": 6,
+          "dish": 5,  
+          "quantity": 1,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 18,
+        "fields": {
+          "order": 6,
+          "dish": 4,  
+          "quantity": 4,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 19,
+        "fields": {
+          "order": 7,
+          "dish": 15,  
+          "quantity": 1,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 20,
+        "fields": {
+          "order": 7,
+          "dish": 16,  
+          "quantity": 2,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 21,
+        "fields": {
+          "order": 7,
+          "dish": 5,  
+          "quantity": 3,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 22,
+        "fields": {
+          "order": 7,
+          "dish": 4,  
+          "quantity": 1,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 23,
+        "fields": {
+          "order": 8,
+          "dish": 17,  
+          "quantity": 2,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 24,
+        "fields": {
+          "order": 8,
+          "dish": 3,  
+          "quantity": 1,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 25,
+        "fields": {
+          "order": 9,
+          "dish": 17,  
+          "quantity": 3,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 26,
+        "fields": {
+          "order": 9,
+          "dish": 3,  
+          "quantity": 2,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 27,
+        "fields": {
+          "order": 10,
+          "dish": 6,  
+          "quantity": 1,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 28,
+        "fields": {
+          "order": 10,
+          "dish": 18,  
+          "quantity": 2,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 29,
+        "fields": {
+          "order": 10,
+          "dish": 19,  
+          "quantity": 3,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 30,
+        "fields": {
+          "order": 10,
+          "dish": 20,  
+          "quantity": 2,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 31,
+        "fields": {
+          "order": 11,
+          "dish": 6,  
+          "quantity": 2,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 32,
+        "fields": {
+          "order": 11,
+          "dish": 18,  
+          "quantity": 1,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 33,
+        "fields": {
+          "order": 11,
+          "dish": 19,  
+          "quantity": 1,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 34,
+        "fields": {
+          "order": 11,
+          "dish": 20, 
+          "quantity": 3,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 35,
+        "fields": {
+          "order": 12,
+          "dish": 19, 
+          "quantity": 2,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 36,
+        "fields": {
+          "order": 12,
+          "dish": 2,  
+          "quantity": 1,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 37,
+        "fields": {
+          "order": 12,
+          "dish": 1,  
+          "quantity": 3,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 38,
+        "fields": {
+          "order": 13,
+          "dish": 19, 
+          "quantity": 1,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 39,
+        "fields": {
+          "order": 13,
+          "dish": 2,  
+          "quantity": 2,
+          "status": "pronto"
+        }
+      },
+      {
+        "model": "orders.orderdetail",
+        "pk": 40,
+        "fields": {
+          "order": 13,
+          "dish": 1,  
+          "quantity": 2,
+          "status": "pronto"
+        }
+      }
+]
+    
+  

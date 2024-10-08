@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block head %} {% endblock %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+{%if user.is_authenticated and "ok" in request.GET.login %}
+        <div class="alert alert-success" role="alert">
+            Login effettuato con successo!
+        </div>
+        {% endif %}
+    <div class="container"  style="max-width: 580px;">    
+    <h1 class="text-center " >{{restaurant_info.name}}</h1>
+
+    <section class="text-center " >
+        <p>Benvenuti nella ristorante {{restaurant_info.name}} in {{restaurant_info.address}}! Benvenuti nel nostro paradiso del sushi! Qui potrete gustare prelibatezze fresche e deliziose, immergendovi in un'esperienza culinaria unica. Siamo felici di avervi qui e non vediamo l'ora di deliziarvi con i nostri piatti creativi e autentici. Buon appetito.</p>
+        {% if restaurant_info.image %}
+        <img src="{{ restaurant_info.image.url }}" alt="{{ restaurant_info.image.url }}" width="300" height="300">
+        {% endif %}
+    </section>
+    </div>
+
+{% endblock %}

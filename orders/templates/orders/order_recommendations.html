@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Raccomandazioni{% endblock %}
+
+{% block content %}
+<h1>Raccomandazioni in base al tuo ordine</h1>
+{% if recommended_dishes %}
+    <ul>
+        {% for dish in recommended_dishes %}
+            <li><a href="{% url 'menu:dish_detail' dish.pk %}">{{ dish.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Non ci sono piatti suggeriti</p>
+{% endif %}
+{% endblock %}
