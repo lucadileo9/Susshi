@@ -53,10 +53,5 @@ This project is a web application built with Django that allows users to browse 
 - **Customer users**: Browse the sushi menu and place orders.
 - **Chef users**: Log in to the admin interface, manage orders, and track the kitchen workflow.
 
-## Future Improvements
-- **Payment integration**: Add online payment gateways for users to pay for their orders.
-- **Order tracking**: Improve real-time order status updates for customers.
-- **Feedback system**: Allow users to review dishes and leave comments.
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
