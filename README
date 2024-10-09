@@ -1,72 +1,70 @@
-# Sito per Ristorante Sushi
+# Sushi Restaurant Ordering System
 
-Sito web per un ristorante sushi, che permette agli utenti di esplorare vari piatti di sushi con descrizioni dettagliate e immagini ed effettuare ricerche mirate. È possibile ordinare i piatti dopo aver fatto il login come tavolo del ristorante.
+This project is a web application built with Django that allows users to browse the menu of a sushi restaurant and place orders. The restaurant staff, specifically a user with chef privileges, can manage incoming orders and update the status of the kitchen.
 
-## Table of Contents
-
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Testing](#testing)
-
-## Requirements
-
-- asgiref 3.8.1
-- Django 5.0.6
-- django-braces 1.15.0
-- pillow 10.3.0
-- sqlparse 0.5.0
-- tzdata 2024.1
-
+## Features
+- **Menu browsing**: Customers can view an organized menu of sushi dishes.
+- **Ordering system**: Users can select items from the menu, create an order, and send it to the kitchen.
+- **Chef management**: A user with chef privileges can manage and track the status of incoming orders.
+  
+## Technologies Used
+- **Django**: Backend framework.
+- **HTML/CSS**: Frontend structure and styling.
+- **SQLite**: Default database for development.
+  
 ## Installation
 
-1. Assicurati di avere Python 3.x installato sul tuo sistema:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/username/sushi-restaurant.git
+   cd sushi-restaurant
+   ```
 
-    ```bash
-    python --version
-    ```
+2. Create a virtual environment and activate it:
+   ```bash
+   python3 -m venv env
+   source env/bin/activate  # For Windows: env\Scripts\activate
+   ```
 
-2. Crea e attiva un ambiente virtuale:
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-    ```bash
-    python -m venv env
-    source env/bin/activate  
-    ```
+4. Apply database migrations:
+   ```bash
+   python manage.py migrate
+   ```
 
-3. Installa tutte le dipendenze:
+5. Create a superuser (for managing the site):
+   ```bash
+   python manage.py createsuperuser
+   ```
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+6. Run the development server:
+   ```bash
+   python manage.py runserver
+   ```
 
-4. Esegui le migrazioni del database:
-
-    ```bash
-    python manage.py migrate
-    ```
+7. Access the website in your browser at `http://127.0.0.1:8000/`.
 
 ## Usage
 
-1. Assicurati che l'ambiente virtuale sia attivo:
+- **Customer users**: Browse the sushi menu and place orders.
+- **Chef users**: Log in to the admin interface, manage orders, and track the kitchen workflow.
 
-    ```bash
-    source env/bin/activate  # Su Windows usa `env\Scripts\activate`
-    ```
+## Project Structure
 
-2. Avvia il server di sviluppo:
+- `/menu/`: Contains models and views related to the sushi menu.
+- `/orders/`: Handles order creation and tracking.
+- `/users/`: Manages authentication for customers and chefs.
 
-    ```bash
-    python manage.py runserver
-    ```
+## Future Improvements
+- **Payment integration**: Add online payment gateways for users to pay for their orders.
+- **Order tracking**: Improve real-time order status updates for customers.
+- **Feedback system**: Allow users to review dishes and leave comments.
 
-3. Apri il browser e vai su `http://localhost:8000`.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-4. L'applicazione è pronta per l'utilizzo. Puoi navigare nel menu, fare ordini, ricevere raccomandazioni e molto altro.
-
-## Testing
-
-Per eseguire i test:
-
-    ```bash
-    python manage.py test
-    ```
+---
