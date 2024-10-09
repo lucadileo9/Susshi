@@ -1,7 +1,3 @@
-Ecco un esempio di README per il tuo progetto di un sito per un ristorante sushi:
-
----
-
 # Sushi Restaurant Ordering System
 
 This project is a web application built with Django that allows users to browse the menu of a sushi restaurant and place orders. The restaurant staff, specifically a user with chef privileges, can manage incoming orders and update the status of the kitchen.
@@ -20,7 +16,7 @@ This project is a web application built with Django that allows users to browse 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/sushi-restaurant.git
+   git clone https://github.com/lucadileo9/Susshi.git
    cd sushi-restaurant
    ```
 
@@ -64,7 +60,3 @@ This project is a web application built with Django that allows users to browse 
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Se vuoi aggiungere ulteriori dettagli o modifiche al README, fammi sapere!
