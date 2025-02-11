@@ -48,6 +48,7 @@ This project is a web application built with Django that allows users to browse 
 
 - **Customer users**: Browse the sushi menu and place orders.
 - **Chef users**: Log in to the admin interface, manage orders, and track the kitchen workflow.
+
 Note:
 If the menu in the header is not visible due to zooming, try reducing the zoom level in your browser (usually by pressing Ctrl + - ).
 The application is designed for local use, so no external access is required.
